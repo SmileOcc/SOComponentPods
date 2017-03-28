@@ -22,8 +22,11 @@ A short description of SOComponentPods "
   s.source_files  = "SOPrivatePodsDemo", "SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
-  s.resource  = "SOPrivatePodsDemo/SOPrivatePodsDemo/SOPrivateFirstLib.framework"
   s.resources = "*.*"
+
+  s.ios.preserve_paths      = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/SOPrivateFirstLib.framework'
+  s.ios.public_header_files  = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/SOPrivateFirstLib.framework/Headers/*.h'
+  s.ios.vendored_frameworks  = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/SOPrivateFirstLib.framework'
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"

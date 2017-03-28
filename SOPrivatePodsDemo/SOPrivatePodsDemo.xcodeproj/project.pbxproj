@@ -13,6 +13,7 @@
 		469B79D11E8A2F2900737F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469B79CF1E8A2F2900737F89 /* Main.storyboard */; };
 		469B79D31E8A2F2900737F89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469B79D21E8A2F2900737F89 /* Assets.xcassets */; };
 		469B79D61E8A2F2A00737F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469B79D41E8A2F2A00737F89 /* LaunchScreen.storyboard */; };
+		469B7A251E8A3A1B00737F89 /* SOPrivateFirstLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B7A241E8A3A1B00737F89 /* SOPrivateFirstLib.framework */; };
 		A4A6CBE6FBCA47C38A5B8A34 /* libPods-SOPrivatePodsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B559C7564431EFDDBDAF9906 /* libPods-SOPrivatePodsDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		469B79D21E8A2F2900737F89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469B79D51E8A2F2A00737F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469B79D71E8A2F2A00737F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469B7A241E8A3A1B00737F89 /* SOPrivateFirstLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SOPrivateFirstLib.framework; sourceTree = "<group>"; };
 		B559C7564431EFDDBDAF9906 /* libPods-SOPrivatePodsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SOPrivatePodsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF81E110A52B58910801F984 /* Pods-SOPrivatePodsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPrivatePodsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOPrivatePodsDemo/Pods-SOPrivatePodsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A6CBE6FBCA47C38A5B8A34 /* libPods-SOPrivatePodsDemo.a in Frameworks */,
+				469B7A251E8A3A1B00737F89 /* SOPrivateFirstLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 		469B79C51E8A2F2900737F89 /* SOPrivatePodsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				469B7A1F1E8A38C200737F89 /* CompentLab */,
 				469B79C91E8A2F2900737F89 /* AppDelegate.h */,
 				469B79CA1E8A2F2900737F89 /* AppDelegate.m */,
 				469B79CC1E8A2F2900737F89 /* ViewController.h */,
@@ -92,6 +96,14 @@
 				469B79C71E8A2F2900737F89 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		469B7A1F1E8A38C200737F89 /* CompentLab */ = {
+			isa = PBXGroup;
+			children = (
+				469B7A241E8A3A1B00737F89 /* SOPrivateFirstLib.framework */,
+			);
+			path = CompentLab;
 			sourceTree = "<group>";
 		};
 		F0404EA54915BF5AFAFF97AD /* Pods */ = {
@@ -351,8 +363,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOPrivatePodsDemo",
+					"$(PROJECT_DIR)/SOPrivatePodsDemo/CompentLab",
 				);
 				INFOPLIST_FILE = SOPrivatePodsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ff.SOPrivatePodsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,8 +382,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOPrivatePodsDemo",
+					"$(PROJECT_DIR)/SOPrivatePodsDemo/CompentLab",
 				);
 				INFOPLIST_FILE = SOPrivatePodsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ff.SOPrivatePodsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,6 +411,7 @@
 				469B79DC1E8A2F2A00737F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

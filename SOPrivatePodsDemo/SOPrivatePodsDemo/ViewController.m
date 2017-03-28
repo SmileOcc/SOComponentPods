@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <SOPrivateFirstLib/SOPrivateFirstLib.h>
+#import <SOPrivateFirstLib/TestMode.h>
 
 @interface ViewController ()
 
@@ -16,7 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [[[YONetwork alloc] init] test];
+    
+    NSString *tt = [TestMode testName:@"xxx"];
+    NSLog(@"---- tt: %@",tt);
+
 }
 
 

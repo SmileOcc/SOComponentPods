@@ -1,0 +1,6 @@
+framework module SOPrivateFirstLib {
+  umbrella header "SOPrivateFirstLib.h"
+
+  export *
+  module * { export * }
+}

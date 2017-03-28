@@ -13,7 +13,9 @@
 		469B79D11E8A2F2900737F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469B79CF1E8A2F2900737F89 /* Main.storyboard */; };
 		469B79D31E8A2F2900737F89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469B79D21E8A2F2900737F89 /* Assets.xcassets */; };
 		469B79D61E8A2F2A00737F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469B79D41E8A2F2A00737F89 /* LaunchScreen.storyboard */; };
-		469B7A251E8A3A1B00737F89 /* SOPrivateFirstLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B7A241E8A3A1B00737F89 /* SOPrivateFirstLib.framework */; };
+		469B7A4D1E8A60CE00737F89 /* CommonTolls.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B7A4C1E8A60CE00737F89 /* CommonTolls.m */; };
+		469B7A501E8A60DB00737F89 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B7A4F1E8A60DB00737F89 /* DataModel.m */; };
+		469B7A531E8A618F00737F89 /* SOPrivateFirstLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B7A521E8A618F00737F89 /* SOPrivateFirstLib.framework */; };
 		A4A6CBE6FBCA47C38A5B8A34 /* libPods-SOPrivatePodsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B559C7564431EFDDBDAF9906 /* libPods-SOPrivatePodsDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,11 @@
 		469B79D21E8A2F2900737F89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469B79D51E8A2F2A00737F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469B79D71E8A2F2A00737F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		469B7A241E8A3A1B00737F89 /* SOPrivateFirstLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SOPrivateFirstLib.framework; sourceTree = "<group>"; };
+		469B7A4B1E8A60CE00737F89 /* CommonTolls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTolls.h; sourceTree = "<group>"; };
+		469B7A4C1E8A60CE00737F89 /* CommonTolls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTolls.m; sourceTree = "<group>"; };
+		469B7A4E1E8A60DB00737F89 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		469B7A4F1E8A60DB00737F89 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		469B7A521E8A618F00737F89 /* SOPrivateFirstLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SOPrivateFirstLib.framework; sourceTree = "<group>"; };
 		B559C7564431EFDDBDAF9906 /* libPods-SOPrivatePodsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SOPrivatePodsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF81E110A52B58910801F984 /* Pods-SOPrivatePodsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPrivatePodsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOPrivatePodsDemo/Pods-SOPrivatePodsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,7 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A6CBE6FBCA47C38A5B8A34 /* libPods-SOPrivatePodsDemo.a in Frameworks */,
-				469B7A251E8A3A1B00737F89 /* SOPrivateFirstLib.framework in Frameworks */,
+				469B7A531E8A618F00737F89 /* SOPrivateFirstLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +107,37 @@
 		469B7A1F1E8A38C200737F89 /* CompentLab */ = {
 			isa = PBXGroup;
 			children = (
-				469B7A241E8A3A1B00737F89 /* SOPrivateFirstLib.framework */,
+				469B7A511E8A617500737F89 /* NetWorkEngine */,
+				469B7A491E8A609B00737F89 /* CommonTools */,
+				469B7A4A1E8A609B00737F89 /* DataModel */,
 			);
 			path = CompentLab;
+			sourceTree = "<group>";
+		};
+		469B7A491E8A609B00737F89 /* CommonTools */ = {
+			isa = PBXGroup;
+			children = (
+				469B7A4B1E8A60CE00737F89 /* CommonTolls.h */,
+				469B7A4C1E8A60CE00737F89 /* CommonTolls.m */,
+			);
+			path = CommonTools;
+			sourceTree = "<group>";
+		};
+		469B7A4A1E8A609B00737F89 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				469B7A4E1E8A60DB00737F89 /* DataModel.h */,
+				469B7A4F1E8A60DB00737F89 /* DataModel.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		469B7A511E8A617500737F89 /* NetWorkEngine */ = {
+			isa = PBXGroup;
+			children = (
+				469B7A521E8A618F00737F89 /* SOPrivateFirstLib.framework */,
+			);
+			path = NetWorkEngine;
 			sourceTree = "<group>";
 		};
 		F0404EA54915BF5AFAFF97AD /* Pods */ = {
@@ -239,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				469B79CE1E8A2F2900737F89 /* ViewController.m in Sources */,
+				469B7A501E8A60DB00737F89 /* DataModel.m in Sources */,
 				469B79CB1E8A2F2900737F89 /* AppDelegate.m in Sources */,
 				469B79C81E8A2F2900737F89 /* main.m in Sources */,
+				469B7A4D1E8A60CE00737F89 /* CommonTolls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +400,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOPrivatePodsDemo",
 					"$(PROJECT_DIR)/SOPrivatePodsDemo/CompentLab",
+					"$(PROJECT_DIR)/SOPrivatePodsDemo/CompentLab/NetWorkEngine",
 				);
 				INFOPLIST_FILE = SOPrivatePodsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -383,6 +420,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SOPrivatePodsDemo",
 					"$(PROJECT_DIR)/SOPrivatePodsDemo/CompentLab",
+					"$(PROJECT_DIR)/SOPrivatePodsDemo/CompentLab/NetWorkEngine",
 				);
 				INFOPLIST_FILE = SOPrivatePodsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

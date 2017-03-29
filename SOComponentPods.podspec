@@ -35,20 +35,25 @@ A short description of SOComponentPods "
 
 
     s.subspec 'NetWorkEngine' do |networkEngine|
-    networkEngine.source_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/NetworkEngine/**/*'
-    networkEngine.public_header_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/NetworkEngine/**/*.h'
-#networkEngine.dependency 'AFNetworking', '~> 2.3'
+
+    networkEngine.preserve_paths      = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/NetworkEngine/SOPrivateFirstLib.framework'
+
+
+#networkEngine.public_header_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/NetworkEngine/SOPrivateFirstLib.framework/**/*.h'
+
+    networkEngine.vendored_frameworks  = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/NetworkEngine/SOPrivateFirstLib.framework'
+
+
     end
 
     s.subspec 'DataModel' do |dataModel|
-    dataModel.source_files = 'Pod/Classes/DataModel/**/*'
-    dataModel.public_header_files = 'Pod/Classes/DataModel/**/*.h'
+dataModel.source_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/DataModel/**/*'
+    dataModel.public_header_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/DataModel/**/*.h'
     end
 
     s.subspec 'CommonTools' do |commonTools|
     commonTools.source_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/CommonTools/**/*'
     commonTools.public_header_files = 'SOPrivatePodsDemo/SOPrivatePodsDemo/CompentLab/CommonTools/**/*.h'
-#commonTools.dependency 'OpenUDID', '~> 1.0.0'
     end
 
     s.subspec 'UIKitAddition' do |ui|
